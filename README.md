@@ -11,4 +11,4 @@ IMPORTANT NOTES: server token is needed to make your server show on the masterli
 
 Set IP/Port  (same as the IP/port in the notepad from step 1) in the cfg file as well.
 
-IF YOU FOUND THIS BY SEARCH, MY GUIDE IS ON THIS ON THIS FORUM 
+IF YOU FOUND THIS BY SEARCH, MY GUIDE IS UNDER THE CFG FILE
