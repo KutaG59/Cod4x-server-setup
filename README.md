@@ -20,7 +20,7 @@ I recently set up a server with the help of [-MAD_DAD-'s](https://botsofwar.foru
 
 1. IP/Port. (If using Hamachi/Radmin or anything, just copy IP from that. port forwarding is still recommended/needed. If you cant port forward, try using default 28960)
 **First**  we need your IP and Port to setup your server to let others join. Open CMD on windows, type ipconfig , look for your ipv4 address. Copy (ctrl+shift+c) and paste into notepad for later. 
-**Next** is port forwarding, It is very misguided that you should use port 28960. DO NOT USE THIS PORT (Unless absolutely needed). Type any random numbers 5-6 chars long, like 274910 (dont use) and set as TCP/UDP protocol also paste this port in your notepad. (if you do not know how to port forward, follow this [guide](https://www.hellotech.com/guide/for/how-to-port-forward) ignore anything once you get to the port forwarding screen for your router, come back to this, and follow what I said above)  In the end, you should have a new port with TDP/UDP on your router/pc (Some Providers like Xfinity let you open ports on specific devices, if so please do this as its less of a security risk for your network)
+**Next** is port forwarding, It is very misguided that you should use port 28960. DO NOT USE THIS PORT (Unless absolutely needed). Type any random numbers 4-5 chars long but make sure its between 0 and 65535, like 27491 (dont use) and set as TCP/UDP protocol also paste this port in your notepad. (if you do not know how to port forward, follow this [guide](https://www.hellotech.com/guide/for/how-to-port-forward) ignore anything once you get to the port forwarding screen for your router, come back to this, and follow what I said above)  In the end, you should have a new port with TDP/UDP on your router/pc (Some Providers like Xfinity let you open ports on specific devices, if so please do this as its less of a security risk for your network)
 
 2. Server Setup.
 **First** we need a copy of your game, so copy and paste (or re-extract) your game to a new folder separate from your [Cod4 folder](https://imgur.com/a/W71oVjn). Then we will download the [server files](https://cod4x.ovh/uploads/short-url/kDLPuAqzAQvrQHSbLtCnl9EE9Ec.zip) for windows. (guide may become out of date, if any issue arises first make sure server files are most recently released V21.2 is current as of 12/1/2023)
@@ -30,14 +30,14 @@ Right click the shortcut, click properties, and where Target is. Go all the way 
 
 > +set dedicated 2 +set net_ip 000.000.000.000 +set net_port 28700 
 +set sv_showasranked 1 +set modstats 0 +set rcon_password "Password" 
- +set sv_maxclients 32 +exec server.cfg
+ +set sv_maxclients 32 +exec server.cfg
 
 **IMPORTANT:** Change the rcon_password, make sure its longer than 6 characters. Its up to you what it is. **DO NOT SHARE, AND DO NOT PASTE THIS OR PUT IT ANY CFG FILE, IT STAYS IN THE SHORTCUT!!!**
 
 **Once** this is set, hit apply, if there is an error, make sure it was fully pasted. There is a character limit, so make sure your folders don't have super long names (ex D:\My Games\Call Of Duty 4 Modern Warfare\Cod Server\) try to keep it short.
 If it says cannot apply/invalid/something, delete the shortcut, make a new one, and try it again.  **NOW** Run the server once to get needed folders/files generated for later steps. (it wont work, that is fine)
 
-3. We will now set up the server settings. If you want to do this from scratch (fun but hard) use this [template](https://github.com/CodeBreakerRU/cod4-server-cfg/blob/master/config.cfg) from Cod4x, or you can use [mine](https://github.com/KutaG59/Cod4x-server-setup/tree/main) (I've made it so all maps rotate, with voting enabled, Everything else is default) Once you have a template ready, make a Text file in your server folder. Paste the template in the folder, Click on file in the top left, save/save all and close the Text file. Rename this file to "server.cfg" and move it to the "Main" Folder
+3. We will now set up the server settings. If you want to do this from scratch (fun but hard) use this [template](https://github.com/CodeBreakerRU/cod4-server-cfg/blob/master/config.cfg) from Cod4x, or you can use [mine](https://github.com/KutaG59/Cod4x-server-setup/blob/main/server.cfg) (I've made it so all maps rotate, with voting enabled, Everything else is default) Once you have a template ready, make a Text file in your server folder. Paste the template in the folder, Click on file in the top left, save/save all and close the Text file. Rename this file to "server.cfg" and move it to the "Main" Folder
 **(go through the template if you use mine, you will have to set a host name and such)**
 
 Once that is all done, your folder structure for your server should look like [this](https://imgur.com/a/myEbMCv)
@@ -45,7 +45,6 @@ Once that is all done, your folder structure for your server should look like [t
 Launch the shortcut, the server should open and run. Once the console stops spamming you should see **"Gameserver is not VAC Secure!"** and following it should be heartbeats from your IP/Port to the masterserver, then following should say **"Server is registered on the master server"** that should be all! Open Cod4x.
 
 Now open the console with **`** (next to 1) and type "connect IP:PORT" (replace ip and port with yours from Step 1) and if you want to have it be private to friends. You can set a password. 
-**Open server.cfg in the Main folder**, Line 48 "**set g_password**" put your password inside the parenthesis. Now to connect with a password set use command "connect IP:PORT; password Password" (replace 2nd password)
+**Open server.cfg in the Main folder**, Line 48 "**set g_password " "**" put your password inside the parenthesis. Now to connect with a password set use command "connect IP:PORT; password Password" (replace 2nd password)
 
-IF YOU NEED ANY HELP, FEEL FREE TO ASK, IF YOU NEED HELP ASAP, IM TYPICALLY FREE TO HELP // Discord: kutag9
-
+IF YOU NEED ANY HELP, FEEL FREE TO ASK BELOW, IF YOU NEED HELP ASAP, IM TYPICALLY FREE TO HELP // Discord: kutag9
